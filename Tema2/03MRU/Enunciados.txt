@@ -1,0 +1,20 @@
+﻿Enunciados
+rm.Estando Rulito Peláez tocando la bandurria debajo de un árbol, vió a lo lejos venir hacia él a un abejorro con perversas y siniestras intenciones. Era el Abejorro Asesino. Si el abejorro estaba a 45m y volaba a una velocidad constante de 3,6km/h. Calcula cuanto tiempo tiene Rulito Peláez para salir corriendo
+
+ru.El abejorro asesino persigue a Rulito Peláez y este tira la bandurria,la gorra y no tira su nombre porque no puede, sale corriendo a refugiarse en su casa. El perverso y funesto abejorro asesino va tras él. Si Rulito Peláez lleva una velocidad constante de 36km/h y tarda 5s en llegar. Calcula a que distancia esta de su casa
+
+rr. Rulito Peláez llega a su casa perseguido por el abejorro asesino, cierra y se arma con un tenedor para defenderse pero el abejorro aporrea la puerta. Rulito Peláez escucha los tremendos golpes y pide auxilio a su amigo Armando Bronca Segura que esta enderezando plátanos a 100m. Calcula cuanto tardó el señor Bronca Segura en escuchar el grito. Dato: velocidad del sonido 340m/s
+
+rc. Rulito Peláez esta en su casa rodeado por el abejorro asesino, ha llamado a su amigo Armando Bronca Segura que esta a 100m, este deja de enderezar plátanos y tarda 10 interminables segundos en llegar. Calcula la velocidad de Armando Bronca Segura
+
+ri. El abejorro rompe la puerta de la casa donde estaba escondido Rulito Peláez, Rulito es un hombre valiente y con arrojo se arroja por la puerta trasera de la casa y recorre 3m para esconderse detrás de un árbol y coger una bicicleta. Si tarda 0,1s en llegar al árbol. Calcula la velocidad de Rulito Peláez
+
+re. El abejorro va detrás de Rulito pero cuando lo va a coger. Rulito Peláez salta de la bicicleta y coge un bus. El abejorro sube al bus y queda junto a la puerta delantera. La gente sale despavorida. Rulito esta en la ultima fila, el abejorro le dice: "Rulito este es tu ultimo momento" y coge al conductor del bus y lo lanza contra Rulito. El conductor va por el aire gritando: ¡Cuidado, que voy!. Lleva una velocidad constante de 3,6km/h y tarda en llegar al fondo del bus 7,5s. Calcula cuanto mide el bus 
+
+rl. El abejorro persigue y alcanza a Rulito Peláez. Lo llama de todo menos guapo. El señor Peláez esta dándolo todo para escapar, da hasta los apellidos. Pero en el último instante sube a un taxi y huye hacia la Montaña Plana que esta a 30km, si quiere llegar en 15 minutos. Calcula la velocidad del taxi
+
+ra.  Cuando Rulito Peláez esta huyendo en taxi, camino de la montaña plana, siendo perseguido por el abejorro asesino, decide abandonar el taxi a mitad de camino y seguir a pie por medio de la calle, el abejorro se percata de la maniobra evasiva de Rulito Peláez y se lanza en su búsqueda, Rulito se esconde en la Cafetería El Grillo Salvaje de su amigo Jonny Me Lavo. Se esconde detrás de un pincho de tortilla. El abejorro se sitúa en la puerta de la cafetería, Rulito le lanza un vaso, si tarda en llegar 0,2s y su velocidad es 90km/h. Calcula la distancia que los separaba
+
+rg. El señor Rulito Peláez huyendo del abejorro asesino se ha escondido en la cafetería El Grillo Salvaje de su amigo Jonny Me Lavo que es superdotado porque tiene una nariz inmensa, Jonny Me Lavo le comenta a Rulito: “Me huelo algo y no es agradable”. A lo que Rulito responde: "yo no he sido", el abejorro está dentro de la cafetería  y avanza lenta e inexorablemente a acabar con el señor Peláez. El abejorro en un movimiento repentino le lanza un cliente (Warren Sánchez es el nombre del infortunado) a una velocidad de 65km/h que alcanza al señor Peláez 0,5s después. Calcula la distancia que los separa.
+
+ro.  En la cafetería El Grillo Salvaje que es donde se ha escondido Rulito Peláez sigue desarrollándose el drama, el dueño de la cafetería Jonny Me Lavo hace honor a su nombre, huele a colonia dee marca: Fragante, ¡vuelve el hombre!. Se huele la tragedia, se huele, ¡por Diós que pestazo!. Rulito Peláez decide hacer lo que mejor sabe, huir. Sale por la ventana del baño con una velocidad de 36km/h. Corre y huye hasta escapar del abejorro. Calcula cuanto tiempo se estuvo moviendo si recorrió 3400m

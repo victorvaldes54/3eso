@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8175315-10"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-8175315-10');
+</script>
+  <meta charset="utf-8">
+  <title>Graph Matching</title>
+</head>
+
+<body style="font-family:sans-serif; font-size:15px; width:680px; margin-left:auto; margin-right:auto;">
+<center>
+    <canvas id="myCanvas" width="680" height="445"></canvas>
+    <div id="buttons">
+      <input type="button" id="play" value="Play" onclick="play()">
+      <input type="button" id="pause" value="Pause" onclick="pause()">
+      <input type="button" id="stepback" value="<< Step" onclick="stepBack()">
+      <input type="button" id="stepforward" value="Step >>" onclick="stepForward()">
+      <input type="button" id="reset" value="Reset" onclick="reset()">
+    </div>
+<BR>
+     <div id="x1slider">
+      Initial position:  -50 m <input type="range" id="initialx1" min="-50" max="50" value="0" step="1" oninput="showx1Value(this.value)" onchange="showx1Value(this.value)"> +50 m &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<div id="initialx1Value">0</div>
+    </div>
+     <div id="v1slider">
+      Velocity: -10 m/s <input type="range" id="initialv1" min="-10" max="10" value="5" step="1" oninput="showv1Value(this.value)" onchange="showv1Value(this.value)"> 10 m/s &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<div id="initialv1Value">5</div>
+    </div>
+     <div id="a1slider">
+      Acceleration: -2.0 m/s/s <input type="range" id="initiala1" min="-2" max="2" value="0" step="0.1" oninput="showa1Value(this.value)" onchange="showa1Value(this.value)"> 2 m/s/s &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<div id="initiala1Value">0.0</div>
+    </div>
+    <div id="xGraphButtons">Match a position graph:
+      <input type="button" id="xgraph1" value="Graph 1" onclick="setGraph(1)">
+      <input type="button" id="xgraph2" value="Graph 2" onclick="setGraph(2)">
+      <input type="button" id="xgraph3" value="Graph 3" onclick="setGraph(3)">
+      <input type="button" id="xgraph4" value="Graph 4" onclick="setGraph(4)">
+      <input type="button" id="xgraph5" value="Graph 5" onclick="setGraph(5)">
+    </div>
+    <div id="vGraphButtons">Match a velocity graph:
+      <input type="button" id="vgraph1" value="Graph 6" onclick="setGraph(6)">
+      <input type="button" id="vgraph2" value="Graph 7" onclick="setGraph(7)">
+      <input type="button" id="vgraph3" value="Graph 8" onclick="setGraph(8)">
+      <input type="button" id="vgraph4" value="Graph 9" onclick="setGraph(9)">
+      <input type="button" id="vgraph5" value="Graph 10" onclick="setGraph(10)">
+    </div>
+    <div id="vGraphButtons">Or, just play with the simulation without matching:
+      <input type="button" id="nograph" value="No match" onclick="setGraph(11)">
+    </div>
+
+
+</center>
+
+  <script>
+
+      function showx1Value(newx1Value)
+      {
+             //get the element
+             var display = document.getElementById("initialx1Value");
+             //show the amount
+             display.innerHTML=newx1Value;
+             x1Init = Number(newx1Value);
+             yStart = yBase2+120-x1Init;
+             reset();
+     }
+
+      function showv1Value(newv1Value)
+      {
+             //get the element
+             var display = document.getElementById("initialv1Value");
+             //show the amount
+             display.innerHTML=newv1Value;
+             v1 = Number(newv1Value);
+             if (index == 0) reset();
+     }
+
+      function showa1Value(newa1Value)
+      {
+             //get the element
+             var display = document.getElementById("initiala1Value");
+             //show the amount
+             a1 = Number(newa1Value);
+             display.innerHTML=a1.toFixed(1);
+             if (index == 0) reset();
+     }
+
+
+      function setGraph(newGraphValue)
+      {
+      		  graphType = newGraphValue;
+//              console.log("graphType = " + graphType);
+
+      		  if (graphType == 1) {
+      		    graph1Title = 'Position vs. time - Graph 1';
+      		    graph2Title = 'Velocity vs. time';
+                match[1].x1 = 0;
+                match[1].y1 = 50;
+                match[1].x2 = 100;
+                match[1].y2 = 50;
+                match[1].x3 = 200;
+                match[1].y3 = 50;
+                match[1].x4 = match[1].x3;
+                match[1].y4 = match[1].y3;
+                match[1].increment = 2;
+                match[1].stopTime = 20;
+
+      		  }
+      		  if (graphType == 2) {
+      		    graph1Title = 'Position vs. time - Graph 2';
+      		    graph2Title = 'Velocity vs. time';
+                match[2].x1 = 0;
+                match[2].y1 = 0;
+                match[2].x2 = 100;
+                match[2].y2 = 50;
+                match[2].x3 = 200;
+                match[2].y3 = 100;
+                match[2].x4 = match[2].x3;
+                match[2].y4 = match[2].y3;
+                match[2].increment = 2;
+                match[2].stopTime = 20;
+      		  }
+      		  if (graphType == 3) {
+      		    graph1Title = 'Position vs. time - Graph 3';
+      		    graph2Title = 'Velocity vs. time';
+                match[3].x1 = 0;
+                match[3].y1 = -50;
+                match[3].x2 = 100;
+                match[3].y2 = -50;
+                match[3].x3 = 200;
+                match[3].y3 = 50;
+                match[3].x4 = match[3].x3;
+                match[3].y4 = match[3].y3;
+                match[3].increment = 2;
+                match[3].stopTime = 20;
+      		  }
+      		  if (graphType == 4) {
+      		    graph1Title = 'Position vs. time - Graph 4';
+      		    graph2Title = 'Velocity vs. time';
+                match[4].x1 = 0;
+                match[4].y1 = 0;
+                match[4].x2 = 100;
+                match[4].y2 = 50;
+                match[4].x3 = 200;
+                match[4].y3 = -50;
+                match[4].x4 = match[4].x3;
+                match[4].y4 = match[4].y3;
+                match[4].increment = 2;
+                match[4].stopTime = 20;
+      		  }
+      		  if (graphType == 5) {
+      		    graph1Title = 'Position vs. time - Graph 5';
+      		    graph2Title = 'Velocity vs. time';
+                match[5].x1 = 0;
+                match[5].y1 = 50;
+                match[5].x2 = 100;
+                match[5].y2 = 20;
+                match[5].x3 = 200;
+                match[5].y3 = 20;
+                match[5].x4 = match[5].x3;
+                match[5].y4 = match[5].y3;
+                match[5].increment = 2;
+                match[5].stopTime = 20;
+      		  }
+
+      		  if (graphType == 6) {
+      		    graph1Title = 'Position vs. time';
+      		    graph2Title = 'Velocity vs. time - Graph 6';
+                match[6].x1 = 0;
+                match[6].y1 = 5;
+                match[6].x2 = 100;
+                match[6].y2 = 5;
+                match[6].x3 = 200;
+                match[6].y3 = 5;
+                match[6].x4 = match[6].x3;
+                match[6].y4 = match[6].y3;
+                match[6].increment = 2;
+                match[6].stopTime = 20;
+      		  }
+
+      		  if (graphType == 7) {
+      		    graph1Title = 'Position vs. time';
+      		    graph2Title = 'Velocity vs. time - Graph 7';
+                match[7].x1 = 0;
+                match[7].y1 = -5;
+                match[7].x2 = 100;
+                match[7].y2 = 0;
+                match[7].x3 = 200;
+                match[7].y3 = 5;
+                match[7].x4 = match[7].x3;
+                match[7].y4 = match[7].y3;
+                match[7].increment = 2;
+                match[7].stopTime = 20;
+      		  }
+
+      		  if (graphType == 8) {
+      		    graph1Title = 'Position vs. time';
+      		    graph2Title = 'Velocity vs. time - Graph 8';
+                match[8].x1 = 0;
+                match[8].y1 = 10;
+                match[8].x2 = 100;
+                match[8].y2 = 0;
+                match[8].x3 = 200;
+                match[8].y3 = -10;
+                match[8].x4 = match[8].x3;
+                match[8].y4 = match[8].y3;
+                match[8].increment = 2;
+                match[8].stopTime = 20;
+      		  }
+
+      		  if (graphType == 9) {
+      		    graph1Title = 'Position vs. time';
+      		    graph2Title = 'Velocity vs. time - Graph 9';
+                match[9].x1 = 0;
+                match[9].y1 = 0;
+                match[9].x2 = 50;
+                match[9].y2 = 5;
+                match[9].x3 = 200;
+                match[9].y3 = 5;
+                match[9].x4 = match[9].x3;
+                match[9].y4 = match[9].y3;
+                match[9].increment = 2;
+                match[9].stopTime = 20;
+      		  }
+
+      		  if (graphType == 10) {
+      		    graph1Title = 'Position vs. time';
+      		    graph2Title = 'Velocity vs. time - Graph 10';
+                match[10].x1 = 0;
+                match[10].y1 = 10;
+                match[10].x2 = 80;
+                match[10].y2 = 10;
+                match[10].x3 = 80;
+                match[10].y3 = -5;
+                match[10].x4 = 200;
+                match[10].y4 = -5;
+                match[10].increment = 2;
+                match[10].stopTime = 20;
+      		  }
+
+
+      		  if (graphType == 11) {
+      		    graph1Title = 'Position vs. time';
+      		    graph2Title = 'Velocity vs. time';
+                match[11].increment = 2;
+                match[11].stopTime = 50;
+
+      		  }
+
+              reset();
+     }
+
+
+      function play() {
+        window.clearTimeout(timer);
+        deltaT = Math.abs(deltaT);
+        runFlag = 1;
+        runMotion();
+
+      }
+
+      function pause() {
+        window.clearTimeout(timer);
+        runFlag = 0;
+
+      }
+
+      function stepForward() {
+        window.clearTimeout(timer);
+        deltaT = Math.abs(deltaT);
+        runFlag = 1;
+        drawMotion();
+
+      }
+
+      function stepBack() {
+        window.clearTimeout(timer);
+        index = index-2;
+        if (index < -1) index = -1;
+        time = index/20;
+        if (x1 >= (xBase+400)) x1 = xBase;
+        deltaT = -Math.abs(deltaT);
+        runFlag = 1;
+        drawMotion();
+
+      }
+
+
+      function reset() {
+        window.clearTimeout(timer);
+        index = -1;
+        time = 0.0;
+        deltaT = Math.abs(deltaT);
+        xIncrement = match[graphType].increment;
+        x1 = x1Init;
+        xPos[0] = x1Init;
+        var temp = document.getElementById("initialv1");
+        velocity[0] = Number(temp.value);
+        v1 = velocity[0];
+        y2Increment = 10;
+        y1Increment = 100;
+        y1Offset = 40;
+
+//        console.log("v zero = " + velocity[0]);
+
+//        maxTime = 50;
+//        if (v1 > 0.0) {
+//          var time1 = (100 - x1Init)/v1;
+//          if (time1 < maxTime) maxTime = time1;
+//        }
+//        if (a2 > 0.0) {
+//          var time2 = Math.sqrt(200/a2);
+//          if (time2 < maxTime) maxTime = time2;
+//        }
+//        xIncrement = 5;
+//        if (maxTime <= 10.0) {
+//           xIncrement = 1;
+//        }
+//        else if (maxTime <= 20.0) xIncrement = 2;
+        runFlag = 1;
+        drawMotion();
+
+      }
+
+
+      var canvas = document.getElementById("myCanvas");
+      var context = canvas.getContext("2d");
+      var index = -1;
+      var xBase = (canvas.width/2)-20;
+      var yBase = 335;
+      var xBase2 = 120;
+      var yBase1 = 65;
+      var yBase2 = 215;
+      var yBase3 = 365;
+
+      var xInit = 37;
+      var graphType = 11;
+      var simTitle = 'Choose a graph to match using the buttons below';
+      var graph1Title = 'Position vs. time';
+      var graph2Title = 'Velocity vs. time';
+      var graph3Title = 'Motion diagram';
+      var yAxis1Title = 'x (m)';
+      var yAxis2Title = 'v (m/s)';
+      var yAxis3Title = 'a (m/s/s)';
+
+      var slope = 0.4;
+      var y1Increment = 100;
+      var y2Increment = 10;
+      var y1Offset = 40;
+
+      var xIncrement = 2;
+      var yNumDecimals = 0;
+      var plot1Color = '#ff00ff';
+      var plot2Color = '#ffff00';
+      var plot3Color = '#00ffff';
+
+      var radius = 6;
+      var maxTime = 10.0;
+      var x1Init = 0;
+      var x1 = 0.0;
+      var v1 = 5.0;
+      var a1 = 0.0
+      var yStart = yBase2+120-(4/3)*x1Init;
+      var y1 = yBase + 40;
+      var x2Init = 0.0;
+      var x2 = xBase;
+      var v2 = 0.0;
+      var v2Current = v2;
+      var a2 = 0.0
+      var y2 = yBase + 40;
+      var time = 0.0;
+      var deltaT = 1/20.0;
+      var timer;
+      var runFlag = 1;
+      var maxIndex = 401;
+      var xPos = new Array(maxIndex);
+      xPos[0] = x1Init;
+      var velocity = new Array(maxIndex);
+      velocity[0] = v1;
+//      console.log("xPos zero = " + xPos[0]);
+      for (var i = 1; i < maxIndex; i++) {
+        xPos[i] = 0;
+        velocity[i] = 0;
+      }
+      var match = new Array(12);
+      for (var i = 0; i < 12; i++) {
+        match[i] = {};
+        match[i].x1 = 0;
+        match[i].y1 = 50;
+        match[i].x2 = 100;
+        match[i].y2 = 50;
+        match[i].x3 = 200;
+        match[i].y3 = 50;
+        match[i].x4 = match[i].x3;
+        match[i].y4 = match[i].y3;
+        match[i].increment = 2;
+        match[i].stopTime = 20;
+       }
+
+      drawMotion();
+
+    function drawMotion() {
+
+//    console.log("In the drawMotion function, with runFlag = " + runFlag );
+
+      if ((x1 >= 100.0)  || (x1 < (-100.0)) || (time >= 50) || (time >= match[graphType].stopTime)) runFlag = 0;
+
+      if (time > 20.0) xIncrement = 5.0;
+
+//    console.log("In the drawMotion function, with runFlag = " + runFlag + " xBase = " + xBase + " x2 = " + x2 + " time = " + time);
+
+      if (runFlag == 1) {    //      run if runFlag equal 1, not if equal 0
+        // clear
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        index = index + 1;
+
+        if (Math.abs(v1) > 10.0) y2Increment = 20;
+        if (Math.abs(v1) > 20.0) y2Increment = 30;
+//        if (x1 < 0.0) {
+//          y1Increment = 100;
+//          y1Offset = 60;
+//        }
+
+
+        // set background color for the entire thing
+           context.fillStyle = "#ffd";
+           context.fillRect(0, 0, canvas.width, canvas.height);
+
+        // set background color for the motion diagram
+        //   context.fillStyle = "#eff";
+        //   context.fillRect(xBase-120, yBase, 520, 40);
+
+        // set background color for each graph
+           context.fillStyle = "#eff";
+           context.fillRect(xBase2, yBase1, 400, 80);
+           context.fillRect(xBase2, yBase2, 400, 80);
+//           context.fillRect(xBase2, yBase3, 400, 80);
+
+        // set line color
+           context.strokeStyle = '#999';
+           context.lineWidth = 2;
+
+           var axisLabel = '';
+           var axisValue = 0;
+
+         // vertical grid lines
+
+          for (var i = 0; i <= 20; i++) {
+           context.beginPath();
+           context.moveTo(xBase2+20*i, yBase1);
+           context.lineTo(xBase2+20*i, yBase1+90);
+           context.stroke();
+           context.font = '14pt Calibri';
+           context.fillStyle = 'black';
+           context.textAlign = 'center';
+           context.textBaseline = 'middle';
+           axisValue = xIncrement*i/2;
+           axisLabel = axisValue.toFixed(0);
+           if (i == 2*Math.trunc(i/2)) context.fillText(axisLabel, xBase2+20*i, yBase1+100);
+          }
+
+         for (var i = 0; i <= 20; i++) {
+           context.beginPath();
+           context.moveTo(xBase2+20*i, yBase2);
+           context.lineTo(xBase2+20*i, yBase2+90);
+           context.stroke();
+           context.font = '14pt Calibri';
+           context.fillStyle = 'black';
+           context.textAlign = 'center';
+           context.textBaseline = 'middle';
+           axisValue = xIncrement*i/2;
+           axisLabel = axisValue.toFixed(0);
+           if (i == 2*Math.trunc(i/2)) context.fillText(axisLabel, xBase2+20*i, yBase2+100);
+          }
+
+//          for (var i = 0; i <= 10; i++) {
+//           context.beginPath();
+//           context.moveTo(xBase2+40*i, yBase3);
+//           context.lineTo(xBase2+40*i, yBase3+90);
+//           context.stroke();
+//           context.font = '14pt Calibri';
+//           context.fillStyle = 'black';
+//           context.textAlign = 'center';
+//           context.textBaseline = 'middle';
+//           axisValue = xIncrement*i;
+//           axisLabel = axisValue.toFixed(0);
+//           context.fillText(axisLabel, xBase2+40*i, yBase3+100);
+//          }
+
+
+         // horizontal grid lines
+         for (i = 0; i <= 4; i++) {
+           context.beginPath();
+           context.moveTo(xBase2-10, yBase1+20*i);
+           context.lineTo(xBase2+400, yBase1+20*i);
+           context.stroke();
+           context.font = '14pt Calibri';
+           context.fillStyle = 'black';
+           context.textAlign = 'center';
+           context.textBaseline = 'middle';
+ //          axisValue = 40*(3-i);
+           axisValue = y1Increment*(1-i/2);
+           axisLabel = axisValue.toFixed(yNumDecimals);
+           if (i == 2*Math.trunc(i/2)) context.fillText(axisLabel, xBase2-24, yBase1+20*i);
+          }
+
+         for (i = 0; i <= 4; i++) {
+           context.beginPath();
+           context.moveTo(xBase2-10, yBase2+20*i);
+           context.lineTo(xBase2+400, yBase2+20*i);
+           context.stroke();
+           context.font = '14pt Calibri';
+           context.fillStyle = 'black';
+           context.textAlign = 'center';
+           context.textBaseline = 'middle';
+ //          axisValue = 40*(3-i);
+           axisValue = y2Increment*(1-i/2);
+           axisLabel = axisValue.toFixed(yNumDecimals);
+           if (i == 2*Math.trunc(i/2)) context.fillText(axisLabel, xBase2-24, yBase2+20*i);
+          }
+
+//         for (i = 0; i <= 2; i++) {
+//           context.beginPath();
+//           context.moveTo(xBase2-10, yBase3+40*i);
+//           context.lineTo(xBase2+400, yBase3+40*i);
+//           context.stroke();
+//           context.font = '14pt Calibri';
+//           context.fillStyle = 'black';
+//           context.textAlign = 'center';
+//           context.textBaseline = 'middle';
+ //          axisValue = 40*(3-i);
+//           axisValue = y2Increment*(2-i);
+//           axisLabel = axisValue.toFixed(yNumDecimals);
+//           context.fillText(axisLabel, xBase2-24, yBase3+40*i);
+//          }
+
+         // x-axis
+           context.strokeStyle = '#000';
+           context.lineWidth = 4;
+           context.beginPath();
+           context.moveTo(xBase2-1, yBase1+80);
+           context.lineTo(xBase2+420, yBase1+80);
+           context.stroke();
+           context.moveTo(xBase2+410, yBase1+80-6);
+           context.lineTo(xBase2+420, yBase1+80);
+           context.lineTo(xBase2+410, yBase1+80+6);
+           context.lineJoin = 'miter';
+           context.stroke();
+           context.font = '16pt Calibri';
+           context.fillStyle = 'black';
+           context.textAlign = 'left';
+           context.fillText('t (s)', xBase2+428, yBase1+80);
+
+           context.strokeStyle = '#000';
+           context.lineWidth = 4;
+           context.beginPath();
+           context.moveTo(xBase2-1, yBase2+80);
+           context.lineTo(xBase2+420, yBase2+80);
+           context.stroke();
+           context.moveTo(xBase2+410, yBase2+80-6);
+           context.lineTo(xBase2+420, yBase2+80);
+           context.lineTo(xBase2+410, yBase2+80+6);
+           context.lineJoin = 'miter';
+           context.stroke();
+           context.font = '16pt Calibri';
+           context.fillStyle = 'black';
+           context.textAlign = 'left';
+           context.fillText('t (sec)', xBase2+428, yBase2+80);
+
+//           context.strokeStyle = '#000';
+//           context.lineWidth = 4;
+//           context.beginPath();
+//           context.moveTo(xBase2-1, yBase3+80);
+//           context.lineTo(xBase2+420, yBase3+80);
+//           context.stroke();
+//           context.moveTo(xBase2+410, yBase3+80-6);
+//           context.lineTo(xBase2+420, yBase3+80);
+//           context.lineTo(xBase2+410, yBase3+80+6);
+//           context.lineJoin = 'miter';
+//           context.stroke();
+//           context.font = '16pt Calibri';
+//           context.fillStyle = 'black';
+//           context.textAlign = 'left';
+//           context.fillText('t (s)', xBase2+428, yBase3+80);
+
+         // y-axis
+           context.strokeStyle = '#000';
+           context.beginPath();
+           context.moveTo(xBase2, yBase1-20);
+           context.lineTo(xBase2, yBase1+80);
+           context.stroke();
+           context.moveTo(xBase2-6, yBase1-10);
+           context.lineTo(xBase2, yBase1-20);
+           context.lineTo(xBase2+6, yBase1-10);
+           context.lineJoin = 'miter';
+           context.stroke();
+           context.strokeStyle = '#000';
+           context.textAlign = 'center';
+           context.fillText(yAxis1Title, xBase2-50, yBase1-20);
+
+           context.strokeStyle = '#000';
+           context.beginPath();
+           context.moveTo(xBase2, yBase2-20);
+           context.lineTo(xBase2, yBase2+80);
+           context.stroke();
+           context.moveTo(xBase2-6, yBase2-10);
+           context.lineTo(xBase2, yBase2-20);
+           context.lineTo(xBase2+6, yBase2-10);
+           context.lineJoin = 'miter';
+           context.stroke();
+           context.strokeStyle = '#000';
+           context.textAlign = 'center';
+           context.fillText(yAxis2Title, xBase2-50, yBase2-20);
+
+//           context.strokeStyle = '#000';
+//           context.beginPath();
+//           context.moveTo(xBase2, yBase3-20);
+//           context.lineTo(xBase2, yBase3+80);
+//           context.stroke();
+//           context.moveTo(xBase2-6, yBase3-10);
+//           context.lineTo(xBase2, yBase3-20);
+//           context.lineTo(xBase2+6, yBase3-10);
+//           context.lineJoin = 'miter';
+//           context.stroke();
+//           context.strokeStyle = '#000';
+//           context.textAlign = 'center';
+//           context.fillText(yAxis3Title, xBase2-50, yBase3-20);
+
+
+
+
+// Back to xBase, yBase
+
+        // set line color
+           context.strokeStyle = '#999';
+           context.lineWidth = 2;
+
+           axisLabel = '';
+           axisValue = 0;
+
+         // vertical grid lines
+         for (var i = -10; i <= 10; i++) {
+           context.beginPath();
+           context.moveTo(xBase+25*i, yBase+30);
+           context.lineTo(xBase+25*i, yBase+50);
+           context.stroke();
+           context.font = '14pt Calibri';
+           context.fillStyle = 'black';
+           context.textAlign = 'center';
+           context.textBaseline = 'middle';
+           axisValue = 10*i;
+           axisLabel = axisValue.toFixed(0);
+           if (i == 2*Math.trunc(i/2)) context.fillText(axisLabel, xBase+25*i, yBase+60);
+          }
+
+         // horizontal grid lines
+  //       for (i = 0; i <= 2; i++) {
+  //         context.beginPath();
+  //         context.moveTo(xBase-120, yBase+20*i);
+  //         context.lineTo(xBase+400, yBase+20*i);
+  //         context.stroke();
+  //         context.font = '14pt Calibri';
+  //         context.fillStyle = 'black';
+  //         context.textAlign = 'center';
+  //         context.textBaseline = 'middle';
+  //        }
+
+         // x-axis
+           context.strokeStyle = '#000';
+           context.lineWidth = 4;
+           context.beginPath();
+           context.moveTo(xBase-251, yBase+40);
+           context.lineTo(xBase+270, yBase+40);
+           context.stroke();
+           context.moveTo(xBase+260, yBase+40-6);
+           context.lineTo(xBase+270, yBase+40);
+           context.lineTo(xBase+260, yBase+40+6);
+           context.lineJoin = 'miter';
+           context.stroke();
+           context.font = '16pt Calibri';
+           context.fillStyle = 'black';
+           context.textAlign = 'left';
+           context.fillText('x (m)', xBase+278, yBase+40);
+
+        // draw motion diagrams
+
+           time = index/20.0;
+           var numGhosts = Math.round(0.5*time+0.5);
+
+           context.fillStyle = '#0cf';
+           context.lineWidth = 2;
+           context.strokeStyle = '#000000';
+
+           if (index > 0) {
+
+             for (var i = 0; i < index; i=i+20)
+             {
+//             var xGhost = xBase + 4*(x1Init +v1*i*2 + 0.5*a1*i*i*4);
+             context.beginPath();
+             context.arc(xBase+2.5*xPos[i], y1, radius/2, 0, 2 * Math.PI, false);
+             context.fill();
+             context.stroke();
+            }
+             var vAve = v1;
+             v1 = v1 + a1*deltaT;
+             vAve = (vAve + v1)/2.0;
+             x1 = x1+vAve*deltaT;
+             xPos[index] = x1;
+             velocity[index] = v1;
+//             console.log("In the drawMotion function, with  v1 = " + v1 + " index = " + index);
+             context.beginPath();
+             context.arc(xBase+2.5*xPos[index], y1, radius, 0, 2 * Math.PI, false);
+             context.fill();
+             context.stroke();
+
+           }
+
+           else {    // draw the ball for index = 0
+//             console.log("current velocity zero = " + velocity[0]);
+
+             context.beginPath();
+             context.arc(xBase+2.5*xPos[0], y1, radius, 0, 2 * Math.PI, false);
+             context.fill();
+             context.stroke();
+
+           }
+
+        // draw matching graph
+            context.strokeStyle = "#0f0";
+            context.lineWidth = 6;
+            context.beginPath();
+            if (graphType <= 5) {
+              context.moveTo(xBase2, yBase1+y1Offset-(40/y1Increment)*match[graphType].y1);
+              context.lineTo(xBase2+2*match[graphType].x2, yBase1+y1Offset-(40/y1Increment)*match[graphType].y2);
+              context.lineTo(xBase2+2*match[graphType].x3, yBase1+y1Offset-(40/y1Increment)*match[graphType].y3);
+              context.lineTo(xBase2+2*match[graphType].x4, yBase1+y1Offset-(40/y1Increment)*match[graphType].y4);
+            }
+            else if (graphType <= 10) {
+              context.moveTo(xBase2, yBase2+40-(40/y2Increment)*match[graphType].y1);
+              context.lineTo(xBase2+2*match[graphType].x2, yBase2+40-(40/y2Increment)*match[graphType].y2);
+              context.lineTo(xBase2+2*match[graphType].x3, yBase2+40-(40/y2Increment)*match[graphType].y3);
+              context.lineTo(xBase2+2*match[graphType].x4, yBase2+40-(40/y2Increment)*match[graphType].y4);
+            }
+            context.stroke();
+
+
+        // draw graph
+
+             context.strokeStyle = "red";
+             context.lineWidth = 4;
+             context.beginPath();
+             context.moveTo(xBase2, yBase1+y1Offset-(40/y1Increment)*xPos[0]);
+             for (var ival = 1; ival <=index; ival++) {
+               context.lineTo(xBase2+2*ival/xIncrement, yBase1+y1Offset-(40/y1Increment)*xPos[ival]);
+             }
+             context.stroke();
+
+             context.beginPath();
+             context.arc(xBase2+2*index/xIncrement, yBase1+y1Offset-(40/y1Increment)*xPos[index], radius, 0, 2 * Math.PI, false);
+             context.fillStyle = "red";
+             context.fill();
+             context.lineWidth = 2;
+             context.strokeStyle = '#000000';
+             context.stroke();
+
+             context.strokeStyle = "red";
+             context.lineWidth = 4;
+             context.beginPath();
+             context.moveTo(xBase2, yBase2+40-(40/y2Increment)*velocity[0]);
+             for (var ival = 1; ival <=index; ival++) {
+               context.lineTo(xBase2+2*ival/xIncrement, yBase2+40-(40/y2Increment)*velocity[ival]);
+             }
+             context.stroke();
+
+             context.beginPath();
+             context.arc(xBase2+2*index/xIncrement, yBase2+40-(40/y2Increment)*velocity[index], radius, 0, 2 * Math.PI, false);
+             context.fillStyle = "red";
+             context.fill();
+             context.lineWidth = 2;
+             context.strokeStyle = '#000000';
+             context.stroke();
+
+           // graph title
+           context.font = 'bold 18pt Calibri';
+           context.fillStyle = 'purple';
+           context.textAlign = 'center';
+           context.fillText(simTitle, (canvas.width)/2, 16);
+
+           context.font = '16pt Calibri';
+           context.fillStyle = 'black';
+           context.fillText(graph1Title, (canvas.width)/2, yBase1-20);
+           context.fillText(graph2Title, (canvas.width)/2, yBase2-20);
+           context.fillText(graph3Title, (canvas.width)/2, yBase3-15);
+
+
+        var timeLabel = 't = ';
+        timeLabel = timeLabel + time.toFixed(2) + ' s';
+        context.textAlign = 'left';
+        context.fillText(timeLabel, xBase-140, 425);
+
+        context.fillStyle = 'red';
+//        var xPosition = (x1Init +v1*time + 0.5*a1*time*time);
+        var xPosLabel = 'x = ';
+//        xPosLabel = xPosLabel + xPosition.toFixed(2) + ' m';
+        xPosLabel = xPosLabel + xPos[index].toFixed(2) + ' m';
+        context.textAlign = 'left';
+        context.fillText(xPosLabel, xBase, 425);
+
+        var velocityValue = velocity[index];
+        var velocityLabel = 'v = ';
+        velocityLabel = velocityLabel + velocityValue.toFixed(2) + ' m/s';
+//        velocityLabel = velocityLabel + velocity[index].toFixed(2) + ' m/s';
+        context.textAlign = 'left';
+        context.fillText(velocityLabel, xBase+140, 425);
+
+      }
+    }
+
+    function runMotion() {
+        drawMotion();
+        if (runFlag == 1) {
+          timer = window.setTimeout(runMotion, 1000/30);
+        }
+      }
+
+  </script>
+
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dct:type">work</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Andrew Duffy</span> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />This simulation can be found in the collection at <a xmlns:dct="http://purl.org/dc/terms/" href="http://physics.bu.edu/~duffy/classroom.html" rel="dct:source">http://physics.bu.edu/~duffy/classroom.html</a>.
+
+    <p>The counter has been running on this page since 8-9-2018. The number of people accessing the page since then is:
+<br><img src="http://physics.bu.edu/cgi-bin/Count.cgi?df=1Dmotion_graph_matching.dat" align="absmiddle">
+
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>3CNMTK</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="xv" />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning  - exelearning.net" />
+<meta name="description" content="cinematica" />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-single-page"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<header id="header">
+<div id="headerContent">
+<h1>3CNMTK</h1>
+</div>
+</header>
+<section id="main">
+<article class="node level-1-node" id="exe-node-0">
+<header class="nodeDecoration">
+<h1 id="exenode_0_Bloque4Elmovimientoylasfuerzas" class="nodeTitle">Bloque4. El movimiento y las fuerzas</h1>
+</header>
+</article>
+<article class="node level-2-node" id="exe-node-16">
+<header class="nodeDecoration">
+<h1 id="exenode_16_Introduccin" class="nodeTitle">Introducción</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id8-16">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta8_108_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Magnitud escalar y magnitud vectorial</strong></p>
+<p><strong><img src="mgEscVect.jpeg" alt="esc" width="302" height="226" /></strong></p>
+<p>Se distinguen dos tipos de magnitudes, unas con saber su valor ya es suficiente como es el caso del tiempo, se llaman magnitudes escalares</p>
+<p>Otras son magnitudes que además de dar su valor, hay que indicar su dirección y sentido, como es el caso del ejemplo: el desplazamiento de una hormiga, además de su valor hay que indicar hacia donde, en que sentido y en que dirección</p>
+<p><strong>Copia en tu cuaderno</strong></p>
+<p><br /><strong><em>Magnitud escalar</em></strong><br />Aquella que queda completamente determinada con un número y sus correspondientes unidades. Por ejemplo, la<br />masa, el volumen...</p>
+<p><br /><em><strong>Magnitud vectorial</strong></em><br />Aquella que, además de un valor numérico y sus unidades, necesita especificar su dirección y sentido. Por<br />ejemplo, la velocidad, la aceleración, la fuerza...</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-1">
+<header class="nodeDecoration">
+<h1 id="exenode_1_1Elmovimiento" class="nodeTitle">1.- El movimiento</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id0-1">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_108_2" class="block iDevice_content">
+<div class="exe-text"><p>El estudio del movimiento de los cuerpos en Física se llama Cinemática. Esto es lo que vamos a estudiar en esta parte del tema</p>
+<p>Para estudiar el movimiento es necesario un sistema de referencia SR</p>
+<p>Mira el vídeo del enlace y fíjate en que María ve que el coche se mueve porque el conductor y el copiloto, (el acompañante del conductor), que están dentro del coche se alejan/acercan de ella. Pero el copiloto no ve que el conductor se mueva porque siempre está a la misma distancia de él. </p>
+<p>Luego para saber si un cuerpo se mueve, en este caso un coche, hay que tener en cuenta el sistema de referencia que se elije</p>
+<p>Mira el vídeo, que te lo explica muchísimo mejor</p>
+<p><a href="SistemadeReferencia.mp4">Enlace</a></p>
+<p><strong>COPIA EN TU CUADERNO</strong></p>
+<p>1.- El Movimiento</p>
+<p>Para definir si un cuerpo se mueve o no, es necesario elegir un Sistema de Referencia, que es un punto respecto al cual el cuerpo cambia de posición cuando se mueve o no cambia de posición cuando no se mueve, está en reposo</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-2">
+<header class="nodeDecoration">
+<h1 id="exenode_2_11Actividades" class="nodeTitle">1.1.-Actividades</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id1-2">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenido</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta1_109_2" class="block iDevice_content">
+<div class="exe-text"><p>Copia en tu cuaderno y realiza</p>
+<p>1.1.-Estás en un autobús sin ventanas, junto a una silla y una pelota.</p>
+<p>A.- ¿Cómo sabes que estás en movimiento?</p>
+<p>B.- Se abre el cristal delantero del bus y observas acercarse otro bus. ¿Cómo sabes que es el otro bus el que se mueve, y no el tuyo?</p>
+<p>Después de realizarlo comprueba tus contestaciones con las que están en el enlace, sino coinciden modifica tus contestaciones. Si hay algo que no entiendes se lo comentas al profesor</p>
+<p><a href="SolAct1_1.pdf">Enlace</a></p>
+<p></p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-3">
+<header class="nodeDecoration">
+<h1 id="exenode_3_2SistemadeReferencia" class="nodeTitle">2.- Sistema de Referencia</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id2-3">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta2_108_2" class="block iDevice_content">
+<div class="exe-text"><p>Visto lo anterior, tenemos claro que para estudiar el movimiento de un cuerpo necesitamos un Sistema de Referencia (SR)</p>
+<p>Se utiliza el mismo que en Matemáticas: El Sistema de Referencia Cartesiano</p>
+<p><img src="SR.jpg" alt="SR" title="SR" width="744" height="457" /></p>
+<p><strong>Copia en tu cuaderno</strong></p>
+<p>Para estudiar el movimiento de un cuerpo se utiliza el<strong> Sistema de Referencia Cartesiano</strong>, tiene</p>
+<p>-- Un punto denominado origen</p>
+<p>-- Dos ejes:</p>
+<p>-------------en el horizontal que es el abscisas, se sitúa la variable independiente, generalmente el tiempo (t)</p>
+<p>-------------en el vertical que es el de ordenadas, se sitúa la variable dependiente, que puede ser la posición, la velocidad, la aceleración, etc</p>
+<p></p>
+<p>En el vídeo que tienes más abajo, se representa el movimiento de un coche.</p>
+<p>Primero representa la posición x que se mide en m frente al tiempo t que se mide en s</p>
+<p>Según avanza el coche, la posición va cambiando con el tiempo</p>
+<p>Pero cuando se representa la velocidad sale una línea horizontal, eso es porque el coche siempre se mueve a la misma velocidad</p>
+<p><a href="GraficasMRU.mp4">Enlace</a></p>
+<p></p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-15">
+<header class="nodeDecoration">
+<h1 id="exenode_15_21Actividades" class="nodeTitle">2.1.- Actividades</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id3-15">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta3_109_2" class="block iDevice_content">
+<div class="exe-text"><p>En el enlace tienes una animación</p>
+<p>En ella puedes cambiar la posición inicial, la velocidad y la aceleración del cuerpo</p>
+<p>Actividades</p>
+<p>Se representa el movimiento de un coche</p>
+<p>1.- Dibuja la gráfica x-t cuando su posición inicial es 0 m y su velocidad es 10m/s. La aceleración tienes que igualar a 0m/s² </p>
+<p>2.- Dibuja la gráfica con las mismas condiciones de antes pero la posición inicial es -50m. Escribe a que tiempo su posición es 0metros. Explica que significa que su posición inicial es -50m</p>
+<p>3.- Dibuja la gráfica v-t cuando la aceleración es 0m/s² y su velocidad es 10m/s. ¿Cambia la velocidad del coche?</p>
+<p>4.- Dibuja la gráfica v-t cuando la aceleración es 0m/s² y su velocidad inicial es 4m/s y su aceleración 1m/s² ¿Cambia la velocidad del coche?</p>
+<p><a href="Coincidencia_de_graficos.html">Enlace</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-4">
+<header class="nodeDecoration">
+<h1 id="exenode_4_3Magnitudesquedefinenelmovimiento" class="nodeTitle">3.- Magnitudes que definen el movimiento</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id4-4">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta4_110_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Copia en tu cuaderno</strong></p>
+<p>Las magnitudes que definen el movimiento de un cuerpo son:</p>
+<p>La posición del cuerpo</p>
+<p>La trayectoria del cuerpo</p>
+<p>El desplazamiento del cuerpo</p>
+<p>La velocidad del cuerpo</p>
+<p>La aceleración del cuerpo</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-5">
+<header class="nodeDecoration">
+<h1 id="exenode_5_31Posicin" class="nodeTitle">3.1.- Posición</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id5-5">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta5_111_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Copia en tu cuaderno</strong></p>
+<p>En Física se distingue entre trayectoria, distancia y desplazamiento</p>
+<p>La posición es la situación del cuerpo en cada momento, para ello se necesita un Sistema de Referencia</p>
+<p>La trayectoria es el camino por donde se mueve el cuerpo</p>
+<p>La distancia es la longitud de la trayectoria del cuerpo</p>
+<p>El desplazamiento es la longitud de una recta desde la posición inicial a la final</p>
+<p>En el vídeo fíjate en la trayectoria, distancia y desplazamiento de María</p>
+<p><a href="TrayectoriaDistanciaDesplazamiento.mp4">Enlace</a></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-6">
+<header class="nodeDecoration">
+<h1 id="exenode_6_32Velocidad" class="nodeTitle">3.2.- Velocidad</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id6-6">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta6_112_2" class="block iDevice_content">
+<div class="exe-text"><p>En Cinemática se estudia el movimiento de los cuerpos, se estudia su velocidad, su posición, etc</p>
+<p><strong></strong></p>
+<p><strong>Copia en tu cuaderno</strong></p>
+<p>La velocidad, v, mide el ritmo al cual cambia la posición de un cuerpo. Se mide en m/s</p>
+<p>Se calcula</p>
+<p><img src="velocidad1.jpeg" alt="v" width="629" height="244" /></p>
+<p>La velocidad es una magnitud vectorial, por eso, necesita además del valor numérico y la unidad, la dirección y sentido del movimiento.</p>
+<p>Se distingue entre:</p>
+<p>-- Velocidad instantánea que es la velocidad de un cuerpo en un momento dado, por ejemplo vas en bicicleta cuesta abajo y en un momento tu velocidad es 5m/s</p>
+<p>-- Velocidad media es la división entre el espacio total recorrido y el tiempo empleado, se mide en m/s</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-4-node" id="exe-node-7">
+<header class="nodeDecoration">
+<h1 id="exenode_7_321Actividades" class="nodeTitle">3.2.1.- Actividades</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id7-7">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Actividades</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta7_113_2" class="block iDevice_content">
+<div class="exe-text"><p>La velocidad en el Sistema Internacional se mide en m/s pero en la vida cotidiana se mide en km/h</p>
+<p>Realiza:</p>
+<p>1.- Cuando se circula a 50km/h. ¿cuántos m/s son?</p>
+<p>2.- Cuando se circula a 90km/h. ¿cuántos m/s son?</p>
+<p>3.- Cuando se circula a 100km/h. ¿cuántos m/s son?</p>
+<p>4.- Cuando se circula a 120km/h. ¿cuántos m/s son?</p>
+<p>En cada caso escribe cuantos metros se recorre en cada segundo en cada uno de los cuatro casos</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-9">
+<header class="nodeDecoration">
+<h1 id="exenode_9_4MovimientoRectilneoUniformeMRU" class="nodeTitle">4.- Movimiento Rectilíneo Uniforme (MRU)</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id10-9">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta10_110_2" class="block iDevice_content">
+<div class="exe-text"><p>Hay movimiento que tienen velocidad constante, como es el caso del sonido,</p>
+<p><img src="sonido1.jpeg" alt="s" width="300" height="168" /></p>
+<p>su velocidad es 340m/s </p>
+<p>La luz cuya velocidad en 300·10³ km/s</p>
+<p><img src="luz.jpeg" alt="l" width="384" height="131" /></p>
+<p><strong>Copia en tu cuaderno</strong></p>
+<p>Cuando un cuerpo se mueve en línea recta y a velocidad constante se dice que su movimiento es rectilíneo uniforme.</p>
+<p><img src="mru.jpeg" alt="m" width="599" height="93" /></p>
+<p>Sus gráficas son</p>
+<p><img src="mru1.jpeg" alt="r" width="400" height="400" />    <img src="mru5.jpeg" alt="j" width="400" height="400" /></p>
+<p>Estas son las gráficas posición (x) - tiempo en el primer caso la pendiente es positiva, luego el cuerpo se aleja del origen, la velocidad es positiva</p>
+<p>En el segundo caso, la pendiente es negativa, el cuerpo se acerca al origen, la velocidad es negativa</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-11">
+<header class="nodeDecoration">
+<h1 id="exenode_11_41Actividades" class="nodeTitle">4.1.- Actividades</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id11-11">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta11_111_2" class="block iDevice_content">
+<div class="exe-text"><p><strong>Copia en tu cuaderno</strong></p>
+<p>Las actividades del MRU se resuelven con la fórmula</p>
+<p><strong>x<sub>f </sub>= x<sub>0</sub> + v· t</strong></p>
+<table border="1" style="width: 33.3333%; height: 54px;">
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 11.71%; height: 29px;"><strong>x<sub>f</sub></strong></td>
+<td style="width: 13.4733%; height: 29px;"><strong>x<sub>0</sub></strong></td>
+<td style="width: 6.73293%; height: 29px;"><strong>v</strong></td>
+<td style="width: 1.50445%; height: 29px;"><strong>t</strong></td>
+</tr>
+<tr style="height: 25px;">
+<td style="width: 11.71%; height: 25px;">Posición final, se mide en m</td>
+<td style="width: 13.4733%; height: 25px;">Posición inicial, se mide en m</td>
+<td style="width: 6.73293%; height: 25px;">velocidad, se mide en m/s</td>
+<td style="width: 1.50445%; height: 25px;">tiempo, se mide en s</td>
+</tr>
+</tbody>
+</table>
+<p>En el enlace está una explicación de como se resuelven los problemas de MRU.</p>
+<p>Copia en tu cuaderno como se resuelve el problema del vídeo, empieza en el minuto 1:10 y termina en el minuto 2:30</p>
+<p><a href="Mrufin.mp4">Enlace</a></p>
+<p></p>
+<p>Copia los enunciados y realiza las siguientes actividades</p>
+<p><a href="rm.html">01MRU</a></p>
+<p><a href="rm.1.html">02MRU</a></p>
+<p><a href="rm.2.html">03MRU</a></p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-12">
+<header class="nodeDecoration">
+<h1 id="exenode_12_5MovimientoRectilneoUniformementeAceleradoMRUA" class="nodeTitle">5.- Movimiento Rectilíneo Uniformemente Acelerado (MRUA)</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id12-12">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta12_108_2" class="block iDevice_content">
+<div class="exe-text"><p>Empezamos con un vídeo donde te explica que es el Movimiento Rectilíneo Uniformemente Acelerado</p>
+<p><strong>Copia en tu cuaderno</strong> todo lo que dice la chica, justo hasta cuando termina la explicación de las dos fórmulas que definen este movimiento</p>
+<p><a href="Mruaexp.mp4">Enlace</a></p>
+<p><strong>Copia en tu cuaderno</strong></p>
+<p>Si representamos gráficamente la posición frente al tiempo obtendremos una gráfica semejante a la siguiente:</p>
+<p></p>
+<p><img src="mrua2.jpeg" alt="m" width="350" height="350" style="font-size: 16.8px;" /></p>
+<p>La gráfica ya no es una línea recta, sino una curva. En el mismo intervalo de tiempo, no recorre el mismo espacio ya que la velocidad va cambiando de forma constante.</p>
+<p>Si representamos gráficamente la velocidad frente al tiempo obtendremos una gráfica semejante a la siguiente:</p>
+<p></p>
+<p><img src="mrua3.jpeg" alt="r" width="240" height="240" style="font-size: 16.8px;" /></p>
+<p>La gráfica es una línea recta porque el cambio en la velocidad es constante.<br />En este ejemplo, la velocidad va aumentando con el tiempo.</p>
+<p>La pendiente de la recta nos da la aceleración del movimiento:<br />A mayor inclinación (pendiente) --&gt;  Mayor aceleración<br />Pendiente positiva --&gt; Aceleración positiva --&gt; La velocidad aumenta con el tiempo --&gt; Acelerando<br />Pendiente negativa --&gt; Aceleración negativa --&gt; La velocidad disminuye con el tiempo --&gt;  Frenando</p>
+<p>Si representamos gráficamente la aceleración frente al tiempo obtendremos una gráfica semejante a la siguiente:</p>
+<p></p>
+<p><img src="mrua5.jpeg" alt="u" width="257" height="257" style="font-size: 16.8px;" /></p>
+<p>La aceleración es la misma en cualquier instante de tiempo.<br />La gráfica es una línea horizontal.<br />La altura de la línea horizontal nos da la aceleración (2m/s² )</p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-13">
+<header class="nodeDecoration">
+<h1 id="exenode_13_51Aceleracin" class="nodeTitle">5.1.- Aceleración</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id9-13">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenido</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta9_109_2" class="block iDevice_content">
+<div class="exe-text"><p>Los cuerpos cuando se mueven y se produce un cambio en su velocidad, se dice que tienen aceleración</p>
+<p><strong>Copia en tu cuaderno</strong></p>
+<p>En un movimiento hay aceleración cuando la velocidad del cuerpo cambia, es decir, aumenta o disminuye</p>
+<p>La aceleración (a) mide el ritmo al cual varía la velocidad. Se calcula como la relación entre la variación de la<br />velocidad (Δv) y el tiempo empleado en hacerlo (Δt).</p>
+<p></p>
+<p></p>
+<p>La aceleración también es una magnitud vectorial, por eso, necesita además del valor numérico y la unidad, la<br />dirección y sentido del movimiento.</p>
+<p>Se calcula</p>
+<p><img src="a.jpeg" alt="a" width="676" height="256" /></p>
+<p><br />Cuando la velocidad aumenta con el tiempo, la aceleración irá en el mismo sentido que la velocidad y será<br />positiva. Se dice que el móvil está acelerando.<br />Cuando la velocidad disminuye con el tiempo, la aceleración irá en sentido contrario a la velocidad y será<br />negativa. Se dice que el móvil está frenando.</p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-14">
+<header class="nodeDecoration">
+<h1 id="exenode_14_52Actividades" class="nodeTitle">5.2.- Actividades</h1>
+</header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id13-14">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h2 class="iDeviceTitle">Contenidos</h2></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta13_108_2" class="block iDevice_content">
+<div class="exe-text"><p>Aquí tienes un enlace donde se explica como se hace un problema</p>
+<p>Copia en tu cuaderno como se resuelve el problema</p>
+<p><a href="Mruaprob.mp4">Enlace</a></p>
+<p></p>
+<p>Ahora vamos a realizar ejercicios</p>
+<p><a href="rm.3.html">01MRUA</a></p>
+<p><a href="rm.4.html">02MRUA</a></p>
+<p><a href="rm.5.html">03MRUA</a></p>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</article>
+</section>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+
+
+</div>
+<script type="text/javascript" src="_style_js.js"></script></body>
+</html>
